@@ -11,7 +11,7 @@
     "brain",
     "mtl cortex"
   ],
-  "shortdesc": "Hippocampal (anterior/posterior, no subfields) and MTL cortex (ERC, PRC, PHC) segmentation in 3 Tesla T1-MRI (MPRAGE)",
+  "shortdesc": "Hippocampus and MTL cortex (ERC, PRC, PHC) segmentation in 3 Tesla T1w MRI",
   "longdesc": "Automatic segmentation of anterior/posterior hippocampal and MTL subregions, including entorhinal cortex, perirhinal cortex (BA35 and BA36) and parahippocampal cortex, in T1-weighted 3 Tesla MRI (MPRAGE) scans, using an atlas of older adults with and without mild cognitive impairment from the Penn Memory Center (PMC).",
   "citation": "https://link.springer.com/chapter/10.1007/978-3-319-46723-8_65",
   "url": "https://sites.google.com/view/ashs-dox/mri-data/ashs-pmc-t1-atlas-requirements?authuser=0",
