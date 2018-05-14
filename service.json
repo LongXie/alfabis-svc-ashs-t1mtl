@@ -1,0 +1,60 @@
+{
+  "name": "ASHS-PMC-T1",
+  "version": "1.0.0",
+  "keywords": [
+    "hippocampus (anterior/posterior)",
+    "entorhinal cortex",
+    "perirhinal cortex",
+    "parahippocampal cortex",
+    "dura",
+    "dementia",
+    "brain",
+    "mtl cortex"
+  ],
+  "shortdesc": "Hippocampal (anterior/posterior, no subfields) and MTL cortex (ERC, PRC, PHC) segmentation in 3 Tesla T1-MRI (MPRAGE)",
+  "longdesc": "Automatic segmentation of anterior/posterior hippocampal and MTL subregions, including entorhinal cortex, perirhinal cortex (BA35 and BA36) and parahippocampal cortex, in T1-weighted 3 Tesla MRI (MPRAGE) scans, using an atlas of older adults with and without mild cognitive impairment from the Penn Memory Center (PMC).",
+  "citation": "https://link.springer.com/chapter/10.1007/978-3-319-46723-8_65",
+  "url": "https://sites.google.com/view/ashs-dox/mri-data/ashs-pmc-t1-atlas-requirements?authuser=0",
+  "tags": [
+    {
+      "name": "T1-MRI",
+      "type": "MainImage",
+      "hint": "Roughtly isotropic (e.g., 1x1x1mm^3) T1-weighted MRI scan of the whole brain.",
+      "required": true
+    },
+    {
+      "name": "AC",
+      "type": "PointLandmark",
+      "hint": "Anterior commissure point can be optionally specified to help align the MRI scan to the brain template.",
+      "required": false
+    },
+    {
+      "name": "PC",
+      "type": "PointLandmark",
+      "hint": "Posterior commissure point can be optionally specified to help align the MRI scan to the brain template.",
+      "required": false
+    }
+  ],
+  "parameters": [
+    {
+      "name": "corr_mode",
+      "displayname" : "Correction Mode",
+      "hint" : "ASHS offers performs segmentation error correction based on a machine learning algorithm. The 'intensity and shape correction' mode is suitable when your data closely matches the intensity characteristics of the ASHS atlas (see paper for details). Otherwise , 'shape correction' is recommended. You may also choose to disable error correction.",
+      "type" : "choose_one",
+      "choices" : [
+        {
+          "name" : "none",
+          "displayname" : "No error correction"
+        },
+        {
+          "name" : "shape",
+          "displayname" : "Shape correction"
+        },
+        {
+          "name" : "intensity",
+          "displayname" : "Intensity correction"
+        }
+        ]
+    }
+  ]
+}
